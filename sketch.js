@@ -26,7 +26,7 @@ function setup() {
   createCanvas(CANVASSIZE, CANVASSIZE, SVG);
   ellipseMode(CORNER);
   angleMode(DEGREES);
-  frameRate(30);
+  frameRate(20);
   setGridRandomly(0.9, FIELDSIZE);
   console.log(grid);
   start = true;
@@ -48,7 +48,9 @@ function draw() {
 function checkNeighbours(row,col,myGrid) {
   let counter = 0;
   for (k = row - 1; k <= row + 1; k++){
+    //k = (FIELDSIZE + k) % FIELDSIZE;
     for ( l = col - 1; l <= col + 1; l++){
+      //l = (FIELDSIZE + l) % FIELDSIZE;
       if ( (0 <= k && k < FIELDSIZE) && (0 <= l && l < FIELDSIZE)){
         if (myGrid[k][l] === 1 && !(k === row && l === col)){
           counter++;
@@ -98,7 +100,7 @@ function drawDot(row, col, num){
   push();
   translate(col * CIRCLELENGTH, row * CIRCLELENGTH);
   fill(255);
-  ellipse(0, 0, CIRCLELENGTH, CIRCLELENGTH);
+  ellipse(0, 0, CIRCLELENGTH - 3, CIRCLELENGTH - 3);
   /*fill(0,255,0);
   textSize(10);
   text(num, 0, 0);
