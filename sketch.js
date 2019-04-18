@@ -99,7 +99,7 @@ function drawGrid(gridArray){
 function drawDot(row, col, num){
   push();
   translate(col * CIRCLELENGTH, row * CIRCLELENGTH);
-  fill(255);
+  fill(255, 237, 115);
   ellipse(0, 0, CIRCLELENGTH - 3, CIRCLELENGTH - 3);
   /*fill(0,255,0);
   textSize(10);
