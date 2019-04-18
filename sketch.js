@@ -1,6 +1,6 @@
 //Variables
 let CANVASSIZE = 600;
-let FIELDSIZE = 10;
+let FIELDSIZE = 30;
 let CIRCLELENGTH = CANVASSIZE / FIELDSIZE;
 let ELLIPSENUMBER;
 let start;
@@ -26,8 +26,8 @@ function setup() {
   createCanvas(CANVASSIZE, CANVASSIZE, SVG);
   ellipseMode(CORNER);
   angleMode(DEGREES);
-  frameRate(2);
-  setGridRandomly(0.1, FIELDSIZE);
+  frameRate(30);
+  setGridRandomly(0.9, FIELDSIZE);
   console.log(grid);
   start = true;
 }
@@ -40,20 +40,17 @@ function draw() {
     start = false;
   }
   else{
-    tempgrid = setNewGrid(tempGrid); 
-    drawGrid(tempGrid);
-    console.log(tempGrid);
+    tempgrid = setNewGrid(tempGrid);
+      drawGrid(tempGrid);
   }
 }
-
-
 
 function checkNeighbours(row,col,myGrid) {
   let counter = 0;
   for (k = row - 1; k <= row + 1; k++){
     for ( l = col - 1; l <= col + 1; l++){
-      if ( 0 <= k && k < FIELDSIZE && 0 <= l && l < FIELDSIZE){
-        if (myGrid[k][l] == 1 && (k != row && l != col)){
+      if ( (0 <= k && k < FIELDSIZE) && (0 <= l && l < FIELDSIZE)){
+        if (myGrid[k][l] === 1 && !(k === row && l === col)){
           counter++;
         }
       }
@@ -68,13 +65,13 @@ function setNewGrid(myGrid){
     for (j = 0; j < FIELDSIZE; j++) {
       let NumOfNeighbours = checkNeighbours(i,j,newGrid);
       //Overcrowded
-      if (NumOfNeighbours > 3){
+      if (NumOfNeighbours > 3 && newGrid[i][j] === 1){
         newGrid[i][j] = 0;
       }
-      else if (NumOfNeighbours == 3 ){
+      else if (NumOfNeighbours === 3 ){
         newGrid[i][j] = 1;
       }
-      else if (newGrid[i][j]==1 && NumOfNeighbours == 2) {
+      else if (newGrid[i][j] === 1 && NumOfNeighbours === 2) {
         newGrid[i][j] = 1;
       }
       else if (NumOfNeighbours <= 1 ){
@@ -86,21 +83,25 @@ function setNewGrid(myGrid){
 }
 
 function drawGrid(gridArray){
-  background(0)
+  background(0);
     for (i = 0; i < FIELDSIZE; i++) {
       for (j = 0; j < FIELDSIZE; j++) {
         if (gridArray[i][j] == 1) {
-          drawDot(i,j);
+          let NumOfNeighbours = checkNeighbours(i,j,gridArray);
+          drawDot(i,j,NumOfNeighbours);
         }
       }
     }
-    console.log("New Grid drawn!")
 }
 
-function drawDot(row, col){
+function drawDot(row, col, num){
   push();
   translate(col * CIRCLELENGTH, row * CIRCLELENGTH);
   fill(255);
   ellipse(0, 0, CIRCLELENGTH, CIRCLELENGTH);
+  /*fill(0,255,0);
+  textSize(10);
+  text(num, 0, 0);
+  */
   pop();
 }
