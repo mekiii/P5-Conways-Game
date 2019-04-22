@@ -22,4 +22,4 @@ Conways game of life is not an actual game, it is rather a simulation with four 
 
 - Each cell with 3 neighbors becomes populated.
 
-With these four simple rules, a variety of complex structures emerge from certain initial patterns in the course of the game. Some remain unchanged, others oscillate, grow or fade. Some structures, so called gliders, move on the playing field. Even for logical functions like AND and OR you can find initial patterns.  Even complex functions of the circuit logic and digital computer technology can be reconstructed.
+With these four simple rules, a variety of complex structures emerge from certain initial patterns in the course of the game. Some remain unchanged, others oscillate, grow or fade. Some structures, so called gliders, move on the playing field. Furthermore for logical functions like AND and OR you can find initial patterns.  Even complex functions of the circuit logic and digital computer technology can be reconstructed.
