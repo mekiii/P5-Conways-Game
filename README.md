@@ -1,5 +1,5 @@
 # Conway's game of life in P5
-In the context of a generative art school project I wanted to become familiar with the javascript library P5. P5 is a javascript library, that has the concept in mind to make code accessible for artists, designers and educators. It is fortunately free or donation based and can be accessed [here](https://p5js.org/).
+In the context of a generative art project I wanted to become familiar with the javascript library P5. P5 itself is based on the concept of making code accessible for artists, designers and educators. It is fortunately free or donation based and can be accessed [here](https://p5js.org/).
 As an easy and yet fascinating example in automation theory I implemented Conway's game of life. 
 
 
