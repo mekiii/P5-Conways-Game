@@ -32,7 +32,7 @@ Sofar the implementation is quite simple. The first step of this algorithm is to
 
 ## Future ideas
 
-There are several ideas I have in mind, to improve this application
+There are several ideas I have in mind, to improve this application:
 
 [ ] Implementing a restart button 
 
@@ -40,3 +40,5 @@ There are several ideas I have in mind, to improve this application
 
 [ ] Classifying certain typical patterns
 
+
+Feel free to comment or clone this repository!
