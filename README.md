@@ -23,3 +23,16 @@ Conways game of life is not an actual game, it is rather a simulation with four 
 - Each cell with 3 neighbors becomes populated.
 
 With these four simple rules, a variety of complex structures emerge from certain initial patterns in the course of the game. Some remain unchanged, others oscillate, grow or fade. Some structures, so called gliders, move on the playing field. Furthermore for logical functions like AND and OR you can find initial patterns.  Even complex functions of the circuit logic and digital computer technology can be reconstructed.
+
+## Implementation
+
+Sofar the implementation is quite simple. The first step of this algorithm is to generate a grid, that is filled randomly with 'living' cells. Afterwards the cell population evolves according to the above-mentioned rules.  
+
+## Future ideas
+
+There are several ideas I have in mind, to improve this application
+
+[ ] Implementing a restart button 
+[ ] Implementing genetic algorithms to optimize the random spread at the beginning
+[ ] Classifying certain typical patterns
+
