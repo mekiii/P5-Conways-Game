@@ -33,6 +33,8 @@ Sofar the implementation is quite simple. The first step of this algorithm is to
 There are several ideas I have in mind, to improve this application
 
 [ ] Implementing a restart button 
+
 [ ] Implementing genetic algorithms to optimize the random spread at the beginning
+
 [ ] Classifying certain typical patterns
 
