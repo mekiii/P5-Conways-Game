@@ -1,14 +1,16 @@
 # Conway's game of life in P5
-To try out the js-framework P5 I implemented Conway's game of life
+In the context of a generative art school project I wanted to become familiar with the javascript library P5. P5 is a javascript library, that has the concept in mind to make code accessible for artists, designers and educators. It is fortunately free or donation based and can be accessed [here](https://p5js.org/).
+As an easy and yet fascinating example in automation theory I implemented Conway's game of life. 
+
 
 ![Conways game of life](https://i.imgur.com/74rkACf.gif)
 
-# About Conways game
+## About Conways game
 Conways game of life is not an actual game, it is rather a simulation with four simple rules that describe how a cell population lives or dies. From these few rules exciting shapes and patterns emerge.
 
-## The Rules
+### The Rules
 
-*For cells that are 'alive':*
+**For cells that are 'alive':**
 
 - Each cell with less than 2 neighbors dies, as if by solitude.
 
@@ -16,7 +18,7 @@ Conways game of life is not an actual game, it is rather a simulation with four 
 
 - Each cell with 2 or 3 neighbors survives.
 
-*For cells that are 'dead'*
+**For cells that are 'dead'**
 
 - Each cell with 3 neighbors becomes populated.
 
