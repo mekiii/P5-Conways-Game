@@ -41,4 +41,4 @@ There are several ideas I have in mind, to improve this application:
 [ ] Classifying certain typical patterns
 
 
-Feel free to comment or clone this repository!
+Feel free to clone this repository!
