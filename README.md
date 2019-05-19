@@ -2,7 +2,7 @@
 In the context of a generative art project I wanted to become familiar with the javascript library P5. P5 itself is based on the concept of making code accessible for artists, designers and educators. It is fortunately free or donation based and can be accessed [here](https://p5js.org/).
 As an easy and yet fascinating example in automation theory I implemented Conway's game of life. 
 
-A live demo can be seen here: https://mekiii.github.io/P5_conwayGame/
+A live demo can be seen here: https://mekiii.github.io/P5-Conways-Game/
 
 
 ![Conways game of life](https://i.imgur.com/74rkACf.gif)
